@@ -30,8 +30,8 @@ public class PostTiempoTranscurridoFilter  extends ZuulFilter{
 		Long tiempoInicio = (Long) request.getAttribute("tiempoInicio");
 		Long tiempoFinal = System.currentTimeMillis();
 		Long tiempoTrancurrido = tiempoFinal - tiempoInicio;
-		log.info(String.format("Teimpo transcurrido en segundos %s seg.", tiempoTrancurrido.doubleValue()/1000.00));
-		log.info(String.format("Teimpo transcurrido en milisegundos %s ms.",tiempoTrancurrido));
+		log.info(String.format("Tiempo transcurrido en segundos %s seg.", tiempoTrancurrido.doubleValue()/1000.00));
+		log.info(String.format("Tiempo transcurrido en milisegundos %s ms.",tiempoTrancurrido));
 		request.setAttribute("tiempoInicio", tiempoInicio);
 		
 				return null;
